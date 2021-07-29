@@ -22,7 +22,7 @@ script:
   - docker build -t udagram-frontend ./project/udagram-frontend
   - docker tag udagram-frontend mwatermanaus/udagram-frontend:v1
 # Reverse Proxy Build
-  - docker build -t udagram-everseproxy ./project/udagram-reverseproxy
+  - docker build -t udagram-reverseproxy ./project/udagram-reverseproxy
   - docker tag reverseproxy mwatermanaus/udagram-reverseproxy:v1
 
 after_success:
