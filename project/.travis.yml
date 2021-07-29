@@ -1,8 +1,0 @@
-# Build the docker images and push to dockerhub
-
-# API Feed Build and push
-- docker build -t udagram-api-feed ./udagram-api-feed
-- docker tag udagram-api-feed mwatermanaus/udagram-api-feed:v1
-
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker push mwatermanaus/udagram-api-feed:v1
