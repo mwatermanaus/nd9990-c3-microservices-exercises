@@ -4,5 +4,5 @@
 ./project/udagram-frontend/package-lock.json
 ./project/udagram-api-feed/package-lock.json
 ./project/udagram-api-user/package-lock.json
-./project/udagram-api-feed/node_modules/
-./project/udagram-api-user/node_modules/
+./project/udagram-api-feed/node_modules
+./project/udagram-api-user/node_modules
