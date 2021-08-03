@@ -14,20 +14,20 @@ before_install:
 script:
 # API Feed Build
   - docker build -t udagram-api-feed ./project/udagram-api-feed
-  - docker tag udagram-api-feed mwatermanaus/udagram-api-feed:v1
+  - docker tag udagram-api-feed mwatermanaus/udagram-api-feed:v2
 # API User Build
   - docker build -t udagram-api-user ./project/udagram-api-user
-  - docker tag udagram-api-user mwatermanaus/udagram-api-user:v1
+  - docker tag udagram-api-user mwatermanaus/udagram-api-user:v2
 # Front End Build
   - docker build -t udagram-frontend ./project/udagram-frontend
-  - docker tag udagram-frontend mwatermanaus/udagram-frontend:v1
+  - docker tag udagram-frontend mwatermanaus/udagram-frontend:v2
 # Reverse Proxy Build
   - docker build -t udagram-reverseproxy ./project/udagram-reverseproxy
-  - docker tag udagram-reverseproxy mwatermanaus/udagram-reverseproxy:v1
+  - docker tag udagram-reverseproxy mwatermanaus/udagram-reverseproxy:v2
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push mwatermanaus/udagram-api-feed:v1
-  - docker push mwatermanaus/udagram-api-user:v1
-  - docker push mwatermanaus/udagram-frontend:v1
-  - docker push mwatermanaus/udagram-reverseproxy:v1
+  - docker push mwatermanaus/udagram-api-feed:v2
+  - docker push mwatermanaus/udagram-api-user:v2
+  - docker push mwatermanaus/udagram-frontend:v2
+  - docker push mwatermanaus/udagram-reverseproxy:v2
