@@ -23,3 +23,7 @@ kubectl describe hpa
 ```bash
 kubectl logs {pod_name}
 ```
+## Resubmission of all as I needed to correct the hpa
+
+I was missing the metric server from K8s and as such have unknown on the metric.
+As I recreated the Cluster I included all new Screenshots
