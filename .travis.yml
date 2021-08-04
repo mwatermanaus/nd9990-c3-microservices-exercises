@@ -14,20 +14,20 @@ before_install:
 script:
 # API Feed Build
   - docker build -t udagram-api-feed ./project/udagram-api-feed
-  - docker tag udagram-api-feed mwatermanaus/udagram-api-feed:v2
+  - docker tag udagram-api-feed mwatermanaus/udagram-api-feed:v3
 # API User Build
   - docker build -t udagram-api-user ./project/udagram-api-user
-  - docker tag udagram-api-user mwatermanaus/udagram-api-user:v2
+  - docker tag udagram-api-user mwatermanaus/udagram-api-user:v3
 # Front End Build
   - docker build -t udagram-frontend ./project/udagram-frontend
   - docker tag udagram-frontend mwatermanaus/udagram-frontend:v3
 # Reverse Proxy Build
   - docker build -t udagram-reverseproxy ./project/udagram-reverseproxy
-  - docker tag udagram-reverseproxy mwatermanaus/udagram-reverseproxy:v2
+  - docker tag udagram-reverseproxy mwatermanaus/udagram-reverseproxy:v3
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push mwatermanaus/udagram-api-feed:v2
-  - docker push mwatermanaus/udagram-api-user:v2
+  - docker push mwatermanaus/udagram-api-feed:v3
+  - docker push mwatermanaus/udagram-api-user:v3
   - docker push mwatermanaus/udagram-frontend:v3
-  - docker push mwatermanaus/udagram-reverseproxy:v2
+  - docker push mwatermanaus/udagram-reverseproxy:v3
